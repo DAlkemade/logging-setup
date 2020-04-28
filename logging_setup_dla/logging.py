@@ -4,6 +4,9 @@ import os
 
 def set_up_root_logger(application_tag: str, logs_dir: str) -> None:
     """Set up root logger."""
+    if not os.path.exists(logs_dir):
+        print("LOGS DIR DOES NOT EXIST")
+        raise ValueError("Logs dir does not exist")
     logging.basicConfig(level=logging.DEBUG,
                         format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                         datefmt='%m-%d %H:%M',
