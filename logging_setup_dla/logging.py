@@ -3,7 +3,11 @@ import os
 
 
 def set_up_root_logger(application_tag: str, logs_dir: str) -> None:
-    """Set up root logger."""
+    """Set up root logger.
+
+    :param application_tag: tag for log filename
+    :param logs_dir: directory to save logs in
+    """
     if not os.path.exists(logs_dir):
         print("LOGS DIR DOES NOT EXIST")
         raise ValueError("Logs dir does not exist")
