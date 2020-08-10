@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setuptools.setup(
-    name="logging_setup_dla",  # Replace with your own username
+    name="daanlogging",  # Replace with your own username
     version="0.0.1",
     author="Daan Alkemade",
     author_email="dla26@cam.ac.uk",
